@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style type="text/css">
+    .carousel-control {
+  padding-top:10%;
+  width:5%;
+}
+#UrOutfits {
+    text-align: center;
+}
+
+</style>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Armario Clothes and Outfits</title>
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+<script>
+   function previewFile(){
+       var preview = document.getElementById('previewImg'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  
+  //Defining a listener for our button, specifically, an onclick handler
+    function addFunction() {
+    //First things first, we need our text:
+    var image = document.getElementById("picture").value; //.value gets input values
+
+    //Now construct a quick list element
+    var array = [];
+    
+
+    //Now use appendChild and add it to the list!
+   array.push(image);
+  // document.write("hi");
+
+
+}
+
+$(document).ready(function() {
+    $('#myCarousel').carousel({
+    interval: 10000
+    })
+    
+    $('#myCarousel').on('slid.bs.carousel', function() {
+        //alert("slid");
+    });
+    
+    
+});
+  </script>
+<!--COPY IN NHTML HEAD-->
+    <link rel="stylesheet" type="text/css" href="slider.css">
+    <script src="slider.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+    <div id="wrapper">
+
+
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="file:///Users/gwc/Desktop/sidebar/home.html">
+                        <img src="armario icon WIP.png" alt="Smiley face" align="middle" width="40px" length="40px"> My Armario
+                    </a> 
+                </li>
+                <li>
+                    <a href="home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"> Home</a>
+                </li>
+                <li>
+                    <a class="glyphicon" href="outfits.html"><img aria-hidden="true" src="outfit.png" alt="" style="width:40px;height:40px;"> Outfits</a>
+                </li>
+                <li>
+                    <a href="calender.html"><span class="glyphicon glyphicon-calendar" aria-hidden="true"> Calendar</a>
+                </li>
+                <li>
+                    <a href="contact.html"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"> Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+    <div class="container">
+    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+    <!--<a href="#image-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></a>-->
+    <!-- Single button -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown-menu">
+        <li><a href="#"><input type="file" id="picture" onchange="previewFile()"></a></li>
+        <li><a href="#"><input type='button' onclick="addFunction()" value='Upload' id='add' /></a></li>
+        <li><a href="#"><input type='button' value='Camera'></a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#"><img id="previewImg" src="" height="300" alt="Preview Image"></a></li>
+    </ul>
+    </div>
+
+        <!-- Page Heading -->
+
+        <div class="row">
+            <div class="col-lg-12">
+            <center><h1><img src="armario icon WIP.png" alt="Smiley face" align="middle" width="70px" length="70px"><small><small>Clothes and Outfits</small></small></h1></center>
+                <h1 class="page-header">
+                    
+                </h1>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+<h2 id="UrOutfits">Your Outfits</h2>    
+<!--COPY IN HTML BODY-->
+<div class="container">
+    <div class="col-md-12">
+        <div class="well">
+            <div id="myCarousel" class="carousel slide">                
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-sm-3"><a href="#x"><img src="outfit1.jpeg" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x"><img src="outfit2.jpeg" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x"><img src="outfit3.jpeg" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x"><img src="outfit4.jpeg" alt="Image" class="img-responsive"></a>
+                            </div>
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/item-->
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="outfit5.jpeg" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="outfit6.jpeg" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="outfit7.jpeg" alt="Image" class="img-responsive"></a>
+                            </div>
+                            <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="outfit8.jpeg" alt="Image" class="img-responsive"></a>
+                            </div>
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/item-->
+                </div>
+                <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+            </div>
+            <!--/myCarousel-->
+        </div>
+        <!--/well-->
+    </div>
+</div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+<div id="container">
+	<footer>Copyright © Armario 2016
+			<a href="https://girlswhocode.com/summer-immersion-programs/"><img src="gwc_logo.png" alt="gwc logo" align="right" width="72px" length="46px" >
+			<a href="http://getbootstrap.com/"><img src="bootstrap_logo.png" alt="bootstrap logo" align="right" width="40px" length="40px" >
+			<a href="https://twitter.com/?lang=en"><img src="twitter_logo.png" alt="twitter logo" align="right" width="40px" length="40px" ></footer>
+</div>
+
+
+</body>
+
+</html>
